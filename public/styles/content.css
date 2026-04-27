@@ -1,0 +1,25 @@
+.nav-bar {
+    list-style: none;
+    border-bottom: 5px solid black;
+}
+
+.nav-item {
+    font-size: 2.5rem;
+    background-color: white;
+    transition: background-color 0.1s ease;
+}
+
+.nav-item:hover{
+    background-color: black;
+}
+
+a {
+    padding: 0% 1rem;
+    text-decoration: none;
+    color: black;
+    transition: color 0.1s ease;
+}
+
+a:hover {
+    color: white;
+}
