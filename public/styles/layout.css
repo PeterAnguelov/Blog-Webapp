@@ -13,3 +13,9 @@ body {
 .nav-item {
     padding-top: 16px;
 }
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

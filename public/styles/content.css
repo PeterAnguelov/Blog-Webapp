@@ -1,8 +1,10 @@
+/* Navbar Detailing */
 .nav-bar {
     list-style: none;
     border-bottom: 5px solid black;
 }
 
+/* Nav Item Detailing */
 .nav-item {
     font-size: 2.5rem;
     background-color: white;
@@ -13,13 +15,14 @@
     background-color: black;
 }
 
-a {
+
+.nav-item-text {
     padding: 0% 1rem;
     text-decoration: none;
     color: black;
     transition: color 0.1s ease;
 }
 
-a:hover {
+.nav-item:hover .nav-item-text {
     color: white;
 }
