@@ -15,8 +15,16 @@ app.get("/about", (req, res) => {
     res.render("about.ejs");
 });
 
-app.get("/post", (req, res) => {
-    res.render("post.ejs");
+app.get("/post/:slug", (req, res) => {
+    const posts = JSON.parse(fs.readFileSync('./data/posts.json', 'utf8'));
+    const post = posts.find(p => p.slug === req.params.slug);
+
+    if (!post) {
+        res.status(404).send("Post not found");
+        return;
+    }
+
+    res.render("post.ejs", { post: post });
 });
 
 app.listen(port, () => {
