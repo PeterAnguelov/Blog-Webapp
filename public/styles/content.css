@@ -15,54 +15,58 @@
     background-color: black;
 }
 
+/* Nav Item Text Detailing */
 .nav-item-text {
-    padding: 0% 1rem;
     text-decoration: none;
     color: black;
-    transition: color 0.1s ease;
+    transition: color 0.2s ease;
 }
 
 .nav-item:hover .nav-item-text {
     color: white;
 }
 
+/* Post List Detailing */
 .post-list {
     list-style: none;
-    width: 1200px;
 }
 
+/* Post Item Detailing*/
 .post-item {
     background-color: white;
-    text-align: center;
-    transition: background-color 0.1s ease;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    border-radius: 20px;
+    transition: background-color 0.2s ease;
 }
 
 .post-item:hover {
     background-color: black;
 }
 
+/* Post Item Link Detailing*/
 .post-item-link {
-    font-size: 2rem;
-    padding: 0% 1rem;
     text-decoration: none;
+}
+
+/* Post Item Title Detailing*/
+.post-item-title {
+    font-size: 2rem;
     color: black;
     border-right: 5px solid black;
-    transition: color 0.1s ease, border-right 0.1s ease;
+    transition: color 0.2s ease, border-right 0.2s ease, font-size 0.2s ease;
 }
 
-.post-item:hover .post-item-link {
+.post-item:hover .post-item-title {
     color: white;
     border-color: white;
+    font-size: 2.5rem;
 }
 
+/* Post Item Excerpt Detailing*/
 .post-item-excerpt {
     font-size: 1.5rem;
-    padding: 0% 1rem;
     text-decoration: none;
     color: black;
-    transition: color 0.1s ease;
+    transition: color 0.2s ease;
 }
 
 .post-item:hover .post-item-excerpt {
