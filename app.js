@@ -1,4 +1,5 @@
 import express from "express";
+import fs from "fs";
 
 const app = express();
 const port = 3000;
@@ -6,7 +7,8 @@ const port = 3000;
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-    res.render("index.ejs");
+    const posts = JSON.parse(fs.readFileSync('./data/posts.json', 'utf8'));
+    res.render("index.ejs", { posts: posts });
 });
 
 app.get("/about", (req, res) => {

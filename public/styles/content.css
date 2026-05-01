@@ -15,7 +15,6 @@
     background-color: black;
 }
 
-
 .nav-item-text {
     padding: 0% 1rem;
     text-decoration: none;
@@ -24,5 +23,48 @@
 }
 
 .nav-item:hover .nav-item-text {
+    color: white;
+}
+
+.post-list {
+    list-style: none;
+    width: 1200px;
+}
+
+.post-item {
+    background-color: white;
+    text-align: center;
+    transition: background-color 0.1s ease;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.post-item:hover {
+    background-color: black;
+}
+
+.post-item-link {
+    font-size: 2rem;
+    padding: 0% 1rem;
+    text-decoration: none;
+    color: black;
+    border-right: 5px solid black;
+    transition: color 0.1s ease, border-right 0.1s ease;
+}
+
+.post-item:hover .post-item-link {
+    color: white;
+    border-color: white;
+}
+
+.post-item-excerpt {
+    font-size: 1.5rem;
+    padding: 0% 1rem;
+    text-decoration: none;
+    color: black;
+    transition: color 0.1s ease;
+}
+
+.post-item:hover .post-item-excerpt {
     color: white;
 }
