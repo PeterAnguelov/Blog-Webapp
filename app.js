@@ -24,7 +24,7 @@ app.get("/post/:slug", (req, res) => {
         return;
     }
 
-    res.render("post.ejs", { post: post });
+    res.render("post.ejs", { post: post, posts: posts });
 });
 
 app.listen(port, () => {

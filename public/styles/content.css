@@ -1,10 +1,10 @@
-/* Navbar Detailing */
+/* ---NAVBAR START--- */
+
 .nav-bar {
     list-style: none;
     border-bottom: 5px solid black;
 }
 
-/* Nav Item Detailing */
 .nav-item {
     font-size: 2.5rem;
     background-color: white;
@@ -15,7 +15,6 @@
     background-color: black;
 }
 
-/* Nav Item Text Detailing */
 .nav-item-text {
     text-decoration: none;
     color: black;
@@ -26,12 +25,14 @@
     color: white;
 }
 
-/* Post List Detailing */
+/* ---NAVBAR END--- */
+
+/* ---POST LIST START--- */
+
 .post-list {
     list-style: none;
 }
 
-/* Post Item Detailing*/
 .post-item {
     background-color: white;
     border-radius: 20px;
@@ -42,14 +43,13 @@
     background-color: black;
 }
 
-/* Post Item Link Detailing*/
 .post-item-link {
     text-decoration: none;
 }
 
-/* Post Item Title Detailing*/
 .post-item-title {
     font-size: 2rem;
+    font-weight: 500;
     color: black;
     border-right: 5px solid black;
     transition: color 0.2s ease, border-right 0.2s ease, font-size 0.2s ease;
@@ -61,7 +61,6 @@
     font-size: 2.5rem;
 }
 
-/* Post Item Excerpt Detailing*/
 .post-item-excerpt {
     font-size: 1.5rem;
     text-decoration: none;
@@ -72,3 +71,40 @@
 .post-item:hover .post-item-excerpt {
     color: white;
 }
+
+/* ---POST LIST END--- */
+
+/* ---POST PAGE START--- */
+
+.side-list {
+    padding: 0%;
+    text-align: center;
+    border-right: 5px solid black;
+}
+
+.side-item {
+    background-color: white;
+    border-radius: 20px;
+    transition: background-color 0.2s ease;
+}
+
+.side-item:hover {
+    background-color: black;
+}
+
+.side-item-link {
+    text-decoration: none;
+}
+
+.side-item-title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: black;
+    transition: color 0.2s ease;
+}
+
+.side-item:hover .side-item-title {
+    color: white;
+}
+
+/* ---POST PAGE END--- */

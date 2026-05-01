@@ -1,7 +1,26 @@
 <%- include("partials/header.ejs") %>
 
-<h1><%= post.title %></h1>
-<p><%= post.date %></p>
-<p><%= post.content %></p>
+<div class="post-page">
+    <!-- Side Panel -->
+    <div class="post-side-panel">
+        <h1>Post List</h1>
+        <ul class="side-list">
+            <% posts.forEach(post => { %>
+            <li class="side-item">
+                <a href="/post/<%= post.slug %>" class="side-item-link">
+                    <div class="side-item-title"><%= post.title %></div>
+                </a>
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="post-content">
+        <h1><%= post.title %></h1>
+        <p><%= post.date %></p>
+        <p><%= post.content %></p>
+    </div>
+</div>
 
 <%- include("partials/footer.ejs") %>
