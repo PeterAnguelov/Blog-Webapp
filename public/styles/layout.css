@@ -2,6 +2,13 @@ body {
     margin: 0%;
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 /* ---NAVBAR START--- */
@@ -23,6 +30,20 @@ body {
 }
 
 /* ---NAVBAR END--- */
+
+/* ---FOOTER START--- */
+
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-link {
+    padding: 10px;
+}
+
+/* ---FOOTER END--- */
 
 /* ---OTHER START--- */
 
