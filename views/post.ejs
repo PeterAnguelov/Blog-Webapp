@@ -4,6 +4,8 @@
     <!-- Side Panel -->
     <div class="post-side-panel">
         <h1>Post List</h1>
+
+        <!-- Generates all the posts in sidebar -->
         <ul class="side-list">
             <% posts.forEach(post => { %>
             <li class="side-item">
@@ -17,8 +19,31 @@
 
     <!-- Main Content -->
     <div class="post-content">
-        <h1><%= post.title %></h1>
+        <!-- Post Title Area -->
+        <div class="post-title-area">
+            <% console.log(post.id); %> <!-- This is a placeholder -->
+
+            <!-- This will choose whether previous button is enabled or disabled -->
+            <% if (post.id > 1) {%>
+                <a href="/post/<%= post.slug %>" class="previous-next-button hover-button">Previous Post</a>
+            <% } else {%>
+                <p class="previous-next-button grayed-button">Previous Post</p>
+            <% } %>
+
+            <h1><%= post.title %></h1>
+
+            <!-- This will choose whether next button is enabled or disabled -->
+            <% if (post.id < posts.length) {%>
+                <a href="/post/<%= post.slug %>" class="previous-next-button hover-button">Next Post</a>
+            <% } else {%>
+                <p class="previous-next-button grayed-button">Next Post</p>
+            <% } %>
+        </div>
+
+        <!-- Date -->
         <p><%= post.date %></p>
+
+        <!-- Post Content -->
         <p><%= post.content %></p>
     </div>
 </div>

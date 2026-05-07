@@ -109,10 +109,31 @@ footer {
     text-align: center;
 }
 
+.post-title-area {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+}
+
+.post-title-area > h1 {
+    margin: 0%;
+    padding: 10px 0px;
+}
+
+.previous-next-button {
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /* ---POST PAGE END--- */
 
 /* ---ABOUT PAGE START--- */
 
-
+.about-center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* ---ABOUT PAGE START--- */

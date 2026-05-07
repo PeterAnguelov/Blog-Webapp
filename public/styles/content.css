@@ -127,4 +127,27 @@ footer {
     color: white;
 }
 
+.previous-next-button {
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-decoration: none;
+    width: 100%;
+    color: black;
+    background-color: rgb(158, 158, 158);
+    border-radius: 20px;
+}
+
+.hover-button {
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.hover-button:hover {
+    color: white;
+    background-color: black;
+}
+
+.grayed-button {
+    color: gray;
+}
+
 /* ---POST PAGE END--- */
