@@ -25,7 +25,7 @@
 
             <!-- This will choose whether previous button is enabled or disabled -->
             <% if (post.id > 1) {%>
-                <a href="/post/<%= post.slug %>" class="previous-next-button hover-button">Previous Post</a>
+                <a href="/post/<%= previousPost.slug %>" class="previous-next-button hover-button">Previous Post</a>
             <% } else {%>
                 <p class="previous-next-button grayed-button">Previous Post</p>
             <% } %>
@@ -34,7 +34,7 @@
 
             <!-- This will choose whether next button is enabled or disabled -->
             <% if (post.id < posts.length) {%>
-                <a href="/post/<%= post.slug %>" class="previous-next-button hover-button">Next Post</a>
+                <a href="/post/<%= nextPost.slug %>" class="previous-next-button hover-button">Next Post</a>
             <% } else {%>
                 <p class="previous-next-button grayed-button">Next Post</p>
             <% } %>

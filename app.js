@@ -24,7 +24,10 @@ app.get("/post/:slug", (req, res) => {
         return;
     }
 
-    res.render("post.ejs", { post: post, posts: posts });
+    const previousPost = posts.find(p => p.id === post.id - 1) || null;
+    const nextPost = posts.find(p => p.id === post.id + 1) || null;
+
+    res.render("post.ejs", { post: post, posts: posts, previousPost: previousPost, nextPost: nextPost});
 });
 
 app.listen(port, () => {
