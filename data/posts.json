@@ -22,29 +22,5 @@
     "date": "2026-04-27",
     "excerpt": "Learning to code is tough but rewarding. Here are some of my thoughts.",
     "content": "This is the full content of the third post. Write whatever you like here."
-  },
-  {
-    "id": 4,
-    "slug": "my-first-post-2",
-    "title": "My First Post",
-    "date": "2026-04-20",
-    "excerpt": "This is a short description of the post that shows on the home page.",
-    "content": "This is the full content of the post. It can be as long as you want. You would write your whole blog post here."
-  },
-  {
-    "id": 5,
-    "slug": "another-post-2",
-    "title": "Another Post",
-    "date": "2026-04-23",
-    "excerpt": "A short description of this second post.",
-    "content": "This is the full content of the second post. Add as much text as you like here."
-  },
-  {
-    "id": 6,
-    "slug": "thoughts-on-learning-to-code-2",
-    "title": "Thoughts on Learning to Code",
-    "date": "2026-04-27",
-    "excerpt": "Learning to code is tough but rewarding. Here are some of my thoughts.",
-    "content": "This is the full content of the third post. Write whatever you like here."
   }
-]
+] 

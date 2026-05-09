@@ -67,6 +67,10 @@ footer {
     text-align: center;
 }
 
+.post-item {
+    margin: 20px 0px;
+}
+
 .post-item-link {
     display: grid;
     grid-template-columns: 1fr 2fr;
