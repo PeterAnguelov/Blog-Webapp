@@ -55,6 +55,24 @@ footer {
 
 /* ---FOOTER END--- */
 
+.new-post-button {
+    text-decoration: none;
+    font-size: 2rem;
+    color: white;
+    border-radius: 20px;
+    background-color: rgba(45, 45, 53, 0.5);
+    transition: background-color 0.2s ease;
+}
+
+.new-post-button:hover {
+    background-color: rgba(45, 45, 53, 1);
+}
+
+.new-post-button:hover .new-post-icon {
+    transform: rotate(90deg);
+    transition: 0.3s;
+}
+
 /* ---POST LIST START--- */
 
 .intro {
