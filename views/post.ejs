@@ -30,7 +30,7 @@
                 <p class="previous-next-button grayed-button">Previous Post</p>
             <% } %>
 
-            <h1><%= post.title %></h1>
+            <h1 class="post-item-title"><%= post.title %></h1>
 
             <!-- This will choose whether next button is enabled or disabled -->
             <% if (post.id < posts.length) {%>
@@ -41,10 +41,13 @@
         </div>
 
         <!-- Date -->
-        <p><%= post.date %></p>
+        <p class="post-item-date"><%= post.date %></p>
 
-        <!-- Post Content -->
-        <p><%= post.content %></p>
+        <div class="post-item-content">
+            <!-- Post Content -->
+            <p><%= post.content %></p>
+        </div>
+        
     </div>
 </div>
 

@@ -123,6 +123,10 @@ footer {
     text-align: center;
 }
 
+.side-item {
+    margin-bottom: 10px;
+}
+
 .side-item-link {
     padding: 0% 1rem;
 }
@@ -140,6 +144,16 @@ footer {
 .post-title-area {
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
+}
+
+.post-item-content {
+    display: flex;
+    justify-content: center;
+}
+
+.post-item-content > p{
+    padding: 15px;
+    width: 1000px;
 }
 
 .post-title-area > h1 {
