@@ -1,14 +1,18 @@
 <%- include("partials/header.ejs") %>
 
-<div class="new-post-section">
-    <label for="title" class="new-post-label">Post Title</label>
-    <input type="text" name="title" class="new-post-title" id="title">
+<form action="/new-post" method="POST">
+    <div class="new-post-section">
+        <label for="title" class="new-post-label">Post Title</label>
+        <input type="text" name="title" class="new-post-title" id="title">
 
-    <label for="excerpt" class="new-post-label">Short Summary</label>
-    <textarea type="text" name="excerpt" class="new-post-excerpt" id="excerpt"></textarea>
+        <label for="excerpt" class="new-post-label">Short Summary</label>
+        <textarea type="text" name="excerpt" class="new-post-excerpt" id="excerpt"></textarea>
 
-    <label for="content" class="new-post-label">Post Content</label>
-    <textarea type="text" name="content" class="new-post-content" id="content"></textarea>
-</div>
+        <label for="content" class="new-post-label">Post Content</label>
+        <textarea type="text" name="content" class="new-post-content" id="content"></textarea>
+
+        <button type="submit" class="btn-submit">Add Post</button>
+    </div>
+</form>
 
 <%- include("partials/footer.ejs") %>
