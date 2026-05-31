@@ -3,14 +3,14 @@
 <div class="post-page">
     <!-- Side Panel -->
     <div class="post-side-panel">
-        <h1>Post List</h1>
+        <h1 class="post-side-title">Post List</h1>
 
         <!-- Generates all the posts in sidebar -->
         <ul class="side-list">
-            <% posts.forEach(post => { %>
-            <li class="side-item">
-                <a href="/post/<%= post.slug %>" class="side-item-link">
-                    <div class="side-item-title"><%= post.title %></div>
+            <% posts.forEach(p => { %>
+            <li class="side-item <%= p.id === post.id ? 'side-item-selected' : ''%>">
+                <a href="/post/<%= p.slug %>" class="side-item-link">
+                    <div class="side-item-title"><%= p.title %></div>
                 </a>
             </li>
             <% }); %>
@@ -21,8 +21,6 @@
     <div class="post-content">
         <!-- Post Title Area -->
         <div class="post-title-area">
-            <% console.log(post.id); %> <!-- This is a placeholder -->
-
             <!-- This will choose whether previous button is enabled or disabled -->
             <% if (post.id > 1) {%>
                 <a href="/post/<%= previousPost.slug %>" class="previous-next-button hover-button">Previous Post</a>

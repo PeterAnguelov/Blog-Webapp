@@ -123,6 +123,11 @@ footer {
     text-align: center;
 }
 
+.post-side-title {
+    margin: 0%;
+    padding: 10px 0px;
+}
+
 .side-item {
     margin-bottom: 10px;
 }
