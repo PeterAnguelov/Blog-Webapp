@@ -23,6 +23,8 @@ app.get("/post/:slug", (req, res) => {
     const posts = JSON.parse(fs.readFileSync('./data/posts.json', 'utf8'));
     const post = posts.find(p => p.slug === req.params.slug);
 
+    // console.log(post.id);
+
     if (!post) {
         res.status(404).send("Post not found");
         return;
@@ -32,6 +34,18 @@ app.get("/post/:slug", (req, res) => {
     const nextPost = posts.find(p => p.id === post.id + 1) || null;
 
     res.render("post.ejs", { post: post, posts: posts, previousPost: previousPost, nextPost: nextPost});
+});
+
+// deletes selected post
+app.post("/post/:slug/delete", (req, res) => {
+    const posts = JSON.parse(fs.readFileSync('./data/posts.json', 'utf8'));
+    const postIndex = posts.findIndex(p => p.slug === req.params.slug);
+    
+    posts.splice(postIndex, 1);
+
+    fs.writeFileSync("./data/posts.json", JSON.stringify(posts, null, 2));
+
+    res.redirect("/");
 });
 
 // loads new post page
@@ -63,12 +77,6 @@ app.post("/new-post", (req, res) => {
 function slugGenerator(title) {
     let slug = title.toLowerCase().replaceAll(" ", "-");
     return slug;
-}
-
-function getDate() {
-    let d = new Date();
-    let currentDate = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
-    return currentDate;
 }
 
 // listens to the server

@@ -41,9 +41,17 @@
         <!-- Date -->
         <p class="post-item-date"><%= post.date %></p>
 
+        <!-- Post Content -->
         <div class="post-item-content">
-            <!-- Post Content -->
             <p><%= post.content %></p>
+        </div>
+
+        <div class="below-content">
+            <!-- Delete Post Button -->
+            <form action="/post/<%= post.slug %>/delete" method="POST">
+                <button type="submit" class="delete-button">Delete Post</button>
+            </form>
+            <!-- <a href="/" class="edit-button">Edit Post</a> -->
         </div>
         
     </div>
