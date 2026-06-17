@@ -51,7 +51,8 @@
             <form action="/post/<%= post.slug %>/delete" method="POST">
                 <button type="submit" class="delete-button">Delete Post</button>
             </form>
-            <!-- <a href="/" class="edit-button">Edit Post</a> -->
+
+            <a href="/edit-post/<%= post.slug %>" class="edit-button">Edit Post</a>
         </div>
         
     </div>

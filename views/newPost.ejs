@@ -1,17 +1,17 @@
 <%- include("partials/header.ejs") %>
 
-<form action="/new-post" method="POST">
+<form action="<%= post ? '/edit-post/' + post.slug : '/new-post' %>" method="POST">
     <div class="new-post-section">
         <label for="title" class="new-post-label">Post Title</label>
-        <input type="text" name="title" class="new-post-title" id="title">
+        <input type="text" name="title" class="new-post-title" id="title" value="<%= post ? post.title : '' %>">
 
         <label for="excerpt" class="new-post-label">Short Summary</label>
-        <textarea type="text" name="excerpt" class="new-post-excerpt" id="excerpt"></textarea>
+        <textarea type="text" name="excerpt" class="new-post-excerpt" id="excerpt"><%= post ? post.excerpt : '' %></textarea>
 
         <label for="content" class="new-post-label">Post Content</label>
-        <textarea type="text" name="content" class="new-post-content" id="content"></textarea>
+        <textarea type="text" name="content" class="new-post-content" id="content"><%= post ? post.content : '' %></textarea>
 
-        <button type="submit" class="btn-submit">Add Post</button>
+        <button type="submit" class="btn-submit"><%= post ? 'Save Changes' : 'Add Post' %></button>
     </div>
 </form>
 

@@ -23,8 +23,6 @@ app.get("/post/:slug", (req, res) => {
     const posts = JSON.parse(fs.readFileSync('./data/posts.json', 'utf8'));
     const post = posts.find(p => p.slug === req.params.slug);
 
-    // console.log(post.id);
-
     if (!post) {
         res.status(404).send("Post not found");
         return;
@@ -54,7 +52,15 @@ app.post("/post/:slug/delete", (req, res) => {
 
 // loads new post page
 app.get("/new-post", (req, res) => {
-    res.render("newPost.ejs");
+    res.render("newPost.ejs", { post: null });
+});
+
+// load post to be edited
+app.get("/edit-post/:slug", (req, res) => {
+    const posts = JSON.parse(fs.readFileSync('./data/posts.json', 'utf8'));
+    const post = posts.find(p => p.slug === req.params.slug);
+
+    res.render('newPost.ejs', { post: post });
 });
 
 // this will create and add the new post to the posts JSON file
@@ -71,6 +77,28 @@ app.post("/new-post", (req, res) => {
     }
     
     posts.push(newPost);
+
+    fs.writeFileSync('./data/posts.json', JSON.stringify(posts, null, 2));
+
+    res.redirect("/");
+});
+
+// this will edit the current selected post from the posts JSON file
+app.post("/edit-post/:slug", (req, res) => {
+    const posts = JSON.parse(fs.readFileSync('./data/posts.json', 'utf8'));
+    const post = posts.find(p => p.slug === req.params.slug);
+    const postIndex = posts.findIndex(p => p.slug === req.params.slug);
+    
+    const editPost = {
+        id: post.id,
+        slug: slugGenerator(req.body.title),
+        title: req.body.title,
+        date: new Date().toISOString().split('T')[0],
+        excerpt: req.body.excerpt,
+        content: req.body.content
+    }
+
+    posts[postIndex] = editPost;
 
     fs.writeFileSync('./data/posts.json', JSON.stringify(posts, null, 2));
 
