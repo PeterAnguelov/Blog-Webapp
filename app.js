@@ -43,6 +43,10 @@ app.post("/post/:slug/delete", (req, res) => {
     
     posts.splice(postIndex, 1);
 
+    for (let i = postIndex; i < posts.length; i++) {
+        posts[i].id = i + 1;
+    }
+
     fs.writeFileSync("./data/posts.json", JSON.stringify(posts, null, 2));
 
     res.redirect("/");
